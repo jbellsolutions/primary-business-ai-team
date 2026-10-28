@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "build_standard": "client-build/1",
+  "name": "Primary Business AI team",
+  "description": "Seven ChatGPT desks for Chris's grain-storage consulting, research and workshop business, run day to day by Adrielle: inbox and calendar triage, Chris's morning brief and on-the-road help, the workshop pipeline and travel shortlists, Xero and bills preparation, farmer social drafts and website upkeep, charts that keep their data honest, and the over-delivery log and deadlines for each government project. The desks read and draft; a person sends, books, posts and pays. Every scheduled task is created paused and turned on by milestone, only on Chris's yes. Ships with a 30-page SOP starter library.",
+  "platform": "ChatGPT (Projects, Skills, Scheduled tasks, Microsoft 365 connectors)",
+  "entry_point": "START-HERE.md",
+  "owner": "Chris",
+  "operator": "Adrielle",
+  "lead": "Team Lead",
+  "timezone": "Australia/Melbourne",
+  "repo_url": "https://github.com/jbellsolutions/primary-business-ai-team",
+  "team_folder": "AI Team (OneDrive)",
+  "accounts": {
+    "operator": {
+      "who": "Adrielle's ChatGPT",
+      "lead_bot": "Team Lead",
+      "desks": [
+        "01",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ]
+    },
+    "chris": {
+      "who": "Chris's own ChatGPT",
+      "lead_bot": "Chief of Staff",
+      "desks": [
+        "02"
+      ]
+    }
+  },
+  "milestones": {
+    "M1": "Team Lead + Chief of Staff: the daily rhythm, triage and SOPs",
+    "M2": "Workshops & Travel + Office Admin",
+    "M3": "Farmer Content + Research & Data",
+    "M4": "Projects & Growth",
+    "later": "Reserved desks 90-93, each when its precondition is true"
+  },
+  "agents": [
+    {
+      "name": "Team Lead",
+      "charter": "agents/01-team-lead.md",
+      "account": "operator",
+      "milestone": "M1",
+      "routines": [
+        "routines/ops-start-of-day.prompt",
+        "routines/ops-end-of-day.prompt",
+        "routines/ops-sop-gap-check.prompt"
+      ],
+      "skills": [
+        "getting-started",
+        "ask-ledger",
+        "day-plan",
+        "task-capture",
+        "inbox-triage",
+        "calendar-entry",
+        "catch-up-pack",
+        "end-of-day-report",
+        "quiet-day-list",
+        "sop-from-recording",
+        "sop-gap-check",
+        "automation-backlog",
+        "handover-list"
+      ],
+      "sops": [
+        "sops/01-inbox-triage-and-filing.md",
+        "sops/03-calendar-entries-with-project-categories.md",
+        "sops/05-daily-catch-up-and-todoist-capture.md",
+        "sops/06-downtime-checklist.md",
+        "sops/07-end-of-day-report.md",
+        "sops/28-file-documents-in-onedrive.md",
+        "sops/29-new-sop-from-a-training-session.md",
+        "sops/30-new-starter-and-leaver-access-checklist.md"
+      ]
+    },
+    {
+      "name": "Chief of Staff",
+      "charter": "agents/02-chief-of-staff.md",
+      "account": "chris",
+      "milestone": "M1",
+      "routines": [
+        "routines/chief-morning-brief.prompt",
+        "routines/chief-weekly-review.prompt"
+      ],
+      "skills": [
+        "morning-brief",
+        "email-triage",
+        "reply-draft",
+        "road-help",
+        "idea-parking-lot",
+        "weekly-review",
+        "decision-log"
+      ],
+      "sops": [
+        "sops/01-inbox-triage-and-filing.md",
+        "sops/02-reply-to-email-for-chris.md",
+        "sops/12-on-the-road-requests-from-chris.md"
+      ]
+    },
+    {
+      "name": "Workshops & Travel",
+      "charter": "agents/03-workshops-and-travel.md",
+      "account": "operator",
+      "milestone": "M2",
+      "routines": [
+        "routines/events-weekly-pipeline.prompt",
+        "routines/events-post-workshop-followup.prompt",
+        "routines/travel-day-pack.prompt"
+      ],
+      "skills": [
+        "workshop-pack",
+        "flyer-brief",
+        "slides-check",
+        "accommodation-shortlist",
+        "travel-options",
+        "travel-day-pack",
+        "venue-scout",
+        "post-workshop-followup"
+      ],
+      "sops": [
+        "sops/08-book-accommodation.md",
+        "sops/09-book-flights.md",
+        "sops/10-book-hire-car-and-parking.md",
+        "sops/11-travel-day-pack.md",
+        "sops/12-on-the-road-requests-from-chris.md",
+        "sops/13-set-up-a-confirmed-workshop.md",
+        "sops/14-workshop-flyer-from-canva-template.md",
+        "sops/15-create-and-post-a-workshop-on-the-website.md",
+        "sops/16-participant-details-and-evaluations-in-airtable.md",
+        "sops/17-log-a-support-call-or-industry-meeting.md",
+        "sops/18-post-workshop-follow-up.md",
+        "sops/19-venue-scouting.md"
+      ]
+    },
+    {
+      "name": "Farmer Content",
+      "charter": "agents/04-farmer-content.md",
+      "account": "operator",
+      "milestone": "M3",
+      "routines": [
+        "routines/content-weekly-drafts.prompt",
+        "routines/content-monthly-site-check.prompt"
+      ],
+      "skills": [
+        "farmer-post",
+        "seasonal-reminders",
+        "research-to-post",
+        "website-post",
+        "site-health-check",
+        "social-setup-plan"
+      ],
+      "sops": [
+        "sops/15-create-and-post-a-workshop-on-the-website.md",
+        "sops/26-website-upkeep.md",
+        "sops/27-social-post.md"
+      ]
+    },
+    {
+      "name": "Research & Data",
+      "charter": "agents/05-research-and-data.md",
+      "account": "operator",
+      "milestone": "M3",
+      "routines": [],
+      "skills": [
+        "honest-chart",
+        "survey-summary",
+        "literature-check",
+        "report-format",
+        "report-draft"
+      ],
+      "sops": [
+        "sops/24-project-report-collation.md",
+        "sops/25-survey-setup-export-and-open-text-summary.md"
+      ]
+    },
+    {
+      "name": "Projects & Growth",
+      "charter": "agents/06-projects-and-growth.md",
+      "account": "operator",
+      "milestone": "M4",
+      "routines": [
+        "routines/contracts-weekly-deadlines.prompt",
+        "routines/contracts-monthly-radar.prompt"
+      ],
+      "skills": [
+        "over-delivery-log",
+        "deadline-tracker",
+        "funder-report-pack",
+        "funding-radar",
+        "proposal-prep"
+      ],
+      "sops": [
+        "sops/24-project-report-collation.md"
+      ]
+    },
+    {
+      "name": "Office Admin",
+      "charter": "agents/07-office-admin.md",
+      "account": "operator",
+      "milestone": "M2",
+      "routines": [
+        "routines/finance-weekly-xero-prep.prompt",
+        "routines/finance-weekly-bills-and-vehicle.prompt"
+      ],
+      "skills": [
+        "xero-coding-prep",
+        "bills-queue",
+        "expense-record",
+        "vehicle-admin",
+        "meeting-invite",
+        "document-filing"
+      ],
+      "sops": [
+        "sops/04-meeting-invites-teams-or-zoom.md",
+        "sops/20-xero-weekly-coding.md",
+        "sops/21-pay-bills-in-nab-connect.md",
+        "sops/22-expenses-for-reimbursement.md",
+        "sops/23-vehicle-services-and-insurance-comparison.md",
+        "sops/28-file-documents-in-onedrive.md"
+      ]
+    },
+    {
+      "name": "Meeting Notes",
+      "charter": "agents/90-meeting-notes.md",
+      "account": "operator",
+      "milestone": "later",
+      "routines": [],
+      "skills": [],
+      "sops": []
+    },
+    {
+      "name": "Social Publisher",
+      "charter": "agents/91-social-publisher.md",
+      "account": "operator",
+      "milestone": "later",
+      "routines": [],
+      "skills": [],
+      "sops": []
+    },
+    {
+      "name": "Agency Outreach",
+      "charter": "agents/92-agency-outreach.md",
+      "account": "operator",
+      "milestone": "later",
+      "routines": [],
+      "skills": [],
+      "sops": []
+    },
+    {
+      "name": "Subcontractor Tracker",
+      "charter": "agents/93-subcontractor-tracker.md",
+      "account": "operator",
+      "milestone": "later",
+      "routines": [],
+      "skills": [],
+      "sops": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "getting-started",
+      "path": "skills/getting-started"
+    },
+    {
+      "name": "ask-ledger",
+      "path": "skills/ask-ledger"
+    },
+    {
+      "name": "day-plan",
+      "path": "skills/day-plan"
+    },
+    {
+      "name": "task-capture",
+      "path": "skills/task-capture"
+    },
+    {
+      "name": "inbox-triage",
+      "path": "skills/inbox-triage"
+    },
+    {
+      "name": "calendar-entry",
+      "path": "skills/calendar-entry"
+    },
+    {
+      "name": "catch-up-pack",
+      "path": "skills/catch-up-pack"
+    },
+    {
+      "name": "end-of-day-report",
+      "path": "skills/end-of-day-report"
+    },
+    {
+      "name": "quiet-day-list",
+      "path": "skills/quiet-day-list"
+    },
+    {
+      "name": "sop-from-recording",
+      "path": "skills/sop-from-recording"
+    },
+    {
+      "name": "sop-gap-check",
+      "path": "skills/sop-gap-check"
+    },
+    {
+      "name": "automation-backlog",
+      "path": "skills/automation-backlog"
+    },
+    {
+      "name": "handover-list",
+      "path": "skills/handover-list"
+    },
+    {
+      "name": "morning-brief",
+      "path": "skills/morning-brief"
+    },
+    {
+      "name": "email-triage",
+      "path": "skills/email-triage"
+    },
+    {
+      "name": "reply-draft",
+      "path": "skills/reply-draft"
+    },
+    {
+      "name": "road-help",
+      "path": "skills/road-help"
+    },
+    {
+      "name": "idea-parking-lot",
+      "path": "skills/idea-parking-lot"
+    },
+    {
+      "name": "weekly-review",
+      "path": "skills/weekly-review"
+    },
+    {
+      "name": "decision-log",
+      "path": "skills/decision-log"
+    },
+    {
+      "name": "workshop-pack",
+      "path": "skills/workshop-pack"
+    },
+    {
+      "name": "flyer-brief",
+      "path": "skills/flyer-brief"
+    },
+    {
+      "name": "slides-check",
+      "path": "skills/slides-check"
+    },
+    {
+      "name": "accommodation-shortlist",
+      "path": "skills/accommodation-shortlist"
+    },
+    {
+      "name": "travel-options",
+      "path": "skills/travel-options"
+    },
+    {
+      "name": "travel-day-pack",
+      "path": "skills/travel-day-pack"
+    },
+    {
+      "name": "venue-scout",
+      "path": "skills/venue-scout"
+    },
+    {
+      "name": "post-workshop-followup",
+      "path": "skills/post-workshop-followup"
+    },
+    {
+      "name": "farmer-post",
+      "path": "skills/farmer-post"
+    },
+    {
+      "name": "seasonal-reminders",
+      "path": "skills/seasonal-reminders"
+    },
+    {
+      "name": "research-to-post",
+      "path": "skills/research-to-post"
+    },
+    {
+      "name": "website-post",
+      "path": "skills/website-post"
+    },
+    {
+      "name": "site-health-check",
+      "path": "skills/site-health-check"
+    },
+    {
+      "name": "social-setup-plan",
+      "path": "skills/social-setup-plan"
+    },
+    {
+      "name": "honest-chart",
+      "path": "skills/honest-chart"
+    },
+    {
+      "name": "survey-summary",
+      "path": "skills/survey-summary"
+    },
+    {
+      "name": "literature-check",
+      "path": "skills/literature-check"
+    },
+    {
+      "name": "report-format",
+      "path": "skills/report-format"
+    },
+    {
+      "name": "report-draft",
+      "path": "skills/report-draft"
+    },
+    {
+      "name": "over-delivery-log",
+      "path": "skills/over-delivery-log"
+    },
+    {
+      "name": "deadline-tracker",
+      "path": "skills/deadline-tracker"
+    },
+    {
+      "name": "funder-report-pack",
+      "path": "skills/funder-report-pack"
+    },
+    {
+      "name": "funding-radar",
+      "path": "skills/funding-radar"
+    },
+    {
+      "name": "proposal-prep",
+      "path": "skills/proposal-prep"
+    },
+    {
+      "name": "xero-coding-prep",
+      "path": "skills/xero-coding-prep"
+    },
+    {
+      "name": "bills-queue",
+      "path": "skills/bills-queue"
+    },
+    {
+      "name": "expense-record",
+      "path": "skills/expense-record"
+    },
+    {
+      "name": "vehicle-admin",
+      "path": "skills/vehicle-admin"
+    },
+    {
+      "name": "meeting-invite",
+      "path": "skills/meeting-invite"
+    },
+    {
+      "name": "document-filing",
+      "path": "skills/document-filing"
+    }
+  ],
+  "projects": [
+    {
+      "name": "meeting-notes-to-tasks",
+      "spec": "projects/meeting-notes-to-tasks/SPEC.md"
+    },
+    {
+      "name": "social-accounts-setup",
+      "spec": "projects/social-accounts-setup/SPEC.md"
+    },
+    {
+      "name": "teams-history-task-mining",
+      "spec": "projects/teams-history-task-mining/SPEC.md"
+    },
+    {
+      "name": "agency-outreach",
+      "spec": "projects/agency-outreach/SPEC.md"
+    },
+    {
+      "name": "subcontractor-progress",
+      "spec": "projects/subcontractor-progress/SPEC.md"
+    }
+  ],
+  "sops": "sops/README.md",
+  "desks_builder": "scripts/build_desks.py"
+}
