@@ -13,7 +13,8 @@ This record keeps three things separate, and honest: what's specified, what's bu
 | Piece | Specified | Built in repo | Active |
 |---|---|---|---|
 | Project charter, approvals, data rules | Yes | `PROJECT_CHARTER.md`, `policies/` | Not yet |
-| Install guide and walkthrough video | Yes | `START-HERE.md`; the video is sent separately | Not yet |
+| Install guide and walkthrough video | Yes | `INSTALL-ADRIELLE.md` and `INSTALL-CHRIS.md` (walked through by ChatGPT from a link), then `START-HERE.md`; the video is sent separately | Not yet |
+| One-click downloads | Yes | The `setup` release: `AI-Team-folder.zip` and every desk, full and compact (built by `scripts/build_release_zips.py`) | Not yet |
 | 01 Team Lead (lead) | Yes | `agents/01-team-lead.md`, 13 skills, 3 routines | Not yet |
 | 02 Chief of Staff | Yes | `agents/02-chief-of-staff.md`, 7 skills, 2 routines | Not yet |
 | 03 Workshops & Travel | Yes | `agents/03-workshops-and-travel.md`, 8 skills, 3 routines | Not yet |
@@ -105,3 +106,4 @@ Each fact is re-checked at install (START-HERE Step 0 and each step's Check) and
 |---|---|---|
 | 2026-10-27 | First build: 7 desks, 4 reserved desks, 50 skills, 14 routines (all paused), 30 SOPs, 5 project specs | #1–#111 (see the ledger for each row's status) |
 | 2026-10-28 | Independent review: 14 findings fixed (above); `desks-compact/` added; the send pack and its privacy scan added; the video re-rendered | #1, #4, #10, #48, #55, #57, #77, #85, #88, #90, #91 |
+| 2026-10-28 | Repo made public. Install from a link: Chris and Adrielle each paste one line into ChatGPT, which walks them through their own guide. One-click downloads in the `setup` release. The compact desks are now the default, because they fit every paid plan's file limit | #1, #2 |

@@ -487,6 +487,7 @@ The team is built from ordinary ChatGPT features. This page says which ones it r
 | **Scheduled tasks** | Each `routines/*.prompt` becomes a scheduled task, created paused | Third-party guide citing OpenAI docs: web tasks can use apps and skills; desktop tasks need the computer awake and the app open | A saved prompt, "Run <name>", that Adrielle runs at that time |
 | **Todoist** app | Desks propose tasks; Adrielle adds them | **Not confirmed** | Desks give one task per line; paste into Todoist's quick add |
 | **Read AI** app | Meeting recaps become tasks (later desk 90) | **Not confirmed** | Paste the Read AI recap into the Team Lead chat |
+| **Project files** | Each desk's files. The compact downloads (15 files at most, plus `owner.md` and `routines-on.md`) fit every paid plan | Third-party guides citing OpenAI (checked 2026-10-28): Plus about 20 to 25 files per project, Business and Pro 40, and 10 files per upload. OpenAI's own pages disagree on the Plus number | The full `desks/` folders (up to 36 files) need Business or Pro |
 | **Memory** | Desks remember corrections | Plan-dependent | Corrections go into `owner.md` or the SOP, then get re-uploaded |
 | **Shared projects** | Not relied on. Chris and Adrielle each have their own desks | Plan-dependent | n/a |
 
@@ -545,7 +546,7 @@ Check the current plan page at openai.com. Each person needs their own account o
 
 # START HERE: setting up Chris's AI team in ChatGPT
 
-**Who reads this:** the ChatGPT **Team Lead** desk, which Adrielle creates in Step 2. It walks Adrielle, and Chris for his part, through the rest. If you're a person reading it, start at Step 0. If you're ChatGPT, follow it top to bottom and do the work yourself. Ask a person only for the things marked **Person step**.
+**Who reads this:** the ChatGPT **Team Lead** desk, which Adrielle creates in Step 2. Adrielle and Chris get there through their own short guides, INSTALL-ADRIELLE.md (repo: `INSTALL-ADRIELLE.md`) and INSTALL-CHRIS.md (repo: `INSTALL-CHRIS.md`), which any ChatGPT chat can walk them through from a link. It walks Adrielle, and Chris for his part, through the rest. If you're a person reading it, start at Step 0. If you're ChatGPT, follow it top to bottom and do the work yourself. Ask a person only for the things marked **Person step**.
 
 **What gets built:** seven ChatGPT Projects ("desks"), each with its own instructions, files and skills. They share one OneDrive folder ("AI Team") as their memory. Their scheduled tasks are created **paused**. Six desks live in Adrielle's ChatGPT. One, the Chief of Staff, lives in Chris's ChatGPT, because it reads his mail and calendar.
 
@@ -599,15 +600,15 @@ Fallback: if OneDrive isn't available, use a folder on Adrielle's computer. The 
 This is the one step a person does before ChatGPT can help.
 
 1. In ChatGPT, choose **Projects → New project**. Name it **01 Team Lead**.
-2. Open the project's **Instructions** and paste in the whole of `desks/01-team-lead/INSTRUCTIONS.md`.
-3. Add everything in `desks/01-team-lead/` to the project's **Files**. Also add `AI Team/context/owner.md` and `AI Team/context/routines-on.md`.
-4. Start a chat in the project and say: **"Read START-HERE.md and set us up. I'm Adrielle."**
+2. Open the project's **Instructions** and paste in the whole of `desks-compact/01-team-lead/INSTRUCTIONS.md`. The easy way: open its plain-text page, https://raw.githubusercontent.com/jbellsolutions/primary-business-ai-team/main/desks-compact/01-team-lead/INSTRUCTIONS.md, select all, copy and paste.
+3. Download https://github.com/jbellsolutions/primary-business-ai-team/releases/latest/download/01-team-lead-compact.zip and unzip it. Add every file in it to the project's **Files**, up to 10 at a time if ChatGPT asks. Also add `AI Team/context/owner.md` and `AI Team/context/routines-on.md`.
+4. Start a chat in the project and say: **"Read START-HERE.md (it's a section of reference.md) and set us up. I'm Adrielle."** With the full desk, START-HERE.md is its own file.
 
 From here, the Team Lead runs the steps.
 
 **Check (Team Lead):** quote the "Owner" line from `owner.md` back to Adrielle, and say which step is next.
 
-Fallback: if your plan can't hold that many project files, use the same desk from `desks-compact/` instead. It has the same `INSTRUCTIONS.md` (paste it into Instructions as usual), the `skill-` files, and one `reference.md` holding everything else.
+**Why the compact download:** Plus holds about 20 to 25 files per project, and Business and Pro hold 40. The compact desk fits every paid plan. It has the same `INSTRUCTIONS.md`, the `skill-` files, and one `reference.md` holding everything else, each section headed with its file's name. On Business or Pro you may use the full desk instead (`desks/01-team-lead/`, download `01-team-lead.zip`), where each file is separate.
 
 ## Step 3. The intake
 
@@ -658,14 +659,14 @@ Say: "Step 6 of 11: creating the desks for this milestone. None of them sends an
 At M1 this is only the Team Lead, which is already done. The Chief of Staff is Chris's, in Step 9. At each later milestone (Step 11), do this for each desk:
 
 1. **Projects → New project.** Name it exactly as in the table at the top, for example **03 Workshops & Travel**.
-2. Paste `desks/<NN-name>/INSTRUCTIONS.md` into **Instructions**.
-3. Add everything in `desks/<NN-name>/`, plus `AI Team/context/owner.md` and `routines-on.md`, to **Files**.
+2. Paste `desks-compact/<NN-name>/INSTRUCTIONS.md` into **Instructions**. Its plain-text page is https://raw.githubusercontent.com/jbellsolutions/primary-business-ai-team/main/desks-compact/<NN-name>/INSTRUCTIONS.md: open it, select all and copy. The links for every desk are in the table at the end of INSTALL-ADRIELLE.md (repo: `INSTALL-ADRIELLE.md`).
+3. Download https://github.com/jbellsolutions/primary-business-ai-team/releases/latest/download/<NN-name>-compact.zip and unzip it. Add every file in it, plus `AI Team/context/owner.md` and `routines-on.md`, to **Files**.
 4. If the plan has **Skills**, save each `skill-*.md` file as a skill named after the file, without `skill-` or `.md`. Otherwise leave them as project files, because the instructions tell the desk to follow them.
 5. **Check:** in the new project, ask "What do you own, and what will you never do?" The answer must match the charter's Operating contract. Then ask it to read one real thing from its main source, for example the next workshop on Chris's calendar.
 
 Add each desk to `AI Team/context/team-registry.md` with its account, files and connections.
 
-Fallback: if the plan can't hold the desk's files (desk 03 has about 30), use `desks-compact/<NN-name>/` instead, the same way as in Step 2.
+On Business or Pro you may use the full desk instead (`<NN-name>.zip`, the same files kept separate), as in Step 2.
 
 ## Step 7. Tools already doing these jobs
 
@@ -707,7 +708,7 @@ Fallback: if the plan has no scheduled tasks, each routine becomes a saved promp
 
 Say: "Step 9 of 11: Chris's own desk, in Chris's ChatGPT. Best done together on the morning catch-up."
 
-1. Chris, in **his own** ChatGPT: **Projects → New project → 02 Chief of Staff.** Paste `desks/02-chief-of-staff/INSTRUCTIONS.md` into Instructions. Add everything in `desks/02-chief-of-staff/`, plus `owner.md` and `routines-on.md` from `AI Team/context/`, to Files.
+1. Chris, in **his own** ChatGPT: **Projects → New project → 02 Chief of Staff.** Paste `desks-compact/02-chief-of-staff/INSTRUCTIONS.md` into Instructions. Add everything in https://github.com/jbellsolutions/primary-business-ai-team/releases/latest/download/02-chief-of-staff-compact.zip, plus `owner.md` and `routines-on.md` from `AI Team/context/`, to Files. INSTALL-CHRIS.md (repo: `INSTALL-CHRIS.md`) Part 2 walks him through this step click by click.
 2. Chris connects **his own** Outlook email, Outlook calendar and Teams in Settings → Apps, signing in himself, with "ask first" for anything that changes something. Optional: OneDrive too, so his desk can read `AI Team/` (Decisions, the parking lot, standing approvals). Without it, those come to him through Adrielle, and the desk says UNKNOWN rather than guessing.
 3. **Check:** in the project, Chris asks "What's on my calendar tomorrow, and which three emails from today matter most?" The answer cites real items.
 4. Chris creates the **Morning brief** and **Weekly review** scheduled tasks on the web, from `routines/chief-morning-brief.prompt` and `routines/chief-weekly-review.prompt`, then pauses each one.

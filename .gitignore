@@ -31,3 +31,6 @@ __pycache__/
 
 # The live team folder belongs in OneDrive, not here (team-folder/ holds only the empty starter files)
 AI Team/
+
+# Release downloads (built by scripts/build_release_zips.py, attached to the GitHub release)
+dist/

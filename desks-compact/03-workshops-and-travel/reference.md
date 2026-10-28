@@ -493,6 +493,7 @@ The team is built from ordinary ChatGPT features. This page says which ones it r
 | **Scheduled tasks** | Each `routines/*.prompt` becomes a scheduled task, created paused | Third-party guide citing OpenAI docs: web tasks can use apps and skills; desktop tasks need the computer awake and the app open | A saved prompt, "Run <name>", that Adrielle runs at that time |
 | **Todoist** app | Desks propose tasks; Adrielle adds them | **Not confirmed** | Desks give one task per line; paste into Todoist's quick add |
 | **Read AI** app | Meeting recaps become tasks (later desk 90) | **Not confirmed** | Paste the Read AI recap into the Team Lead chat |
+| **Project files** | Each desk's files. The compact downloads (15 files at most, plus `owner.md` and `routines-on.md`) fit every paid plan | Third-party guides citing OpenAI (checked 2026-10-28): Plus about 20 to 25 files per project, Business and Pro 40, and 10 files per upload. OpenAI's own pages disagree on the Plus number | The full `desks/` folders (up to 36 files) need Business or Pro |
 | **Memory** | Desks remember corrections | Plan-dependent | Corrections go into `owner.md` or the SOP, then get re-uploaded |
 | **Shared projects** | Not relied on. Chris and Adrielle each have their own desks | Plan-dependent | n/a |
 
